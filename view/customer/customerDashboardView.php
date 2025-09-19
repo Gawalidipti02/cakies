@@ -1,11 +1,13 @@
 <html>
     <head>
     <link href = "css/dashboardView.css" rel = "stylesheet">
+   <script src="https://kit.fontawesome.com/1750ee396c.js" crossorigin="anonymous"></script>
+	
 </head>
 <body>
     <div id = "container">
             <h1 id = "browseCake"> 
-                <b> Browse Cakes</b> 
+                <b> Cakeshop Dashboard</b> 
             </h1>   
             <div id = "innerContainer1"> 
                  <div class = "items">
@@ -15,7 +17,9 @@
                     </a>
                 </div>
                  <div class = "items">
-                    <div> <b> My Cart </b> </div>
+                    <div>                         
+	                    <i class="fa-solid fa-cart-shopping "style ="color: red;"></i>
+                        <b> My Cart </b> </div>
                     <div class = "smallItem"> View and manage your cart</div>
                 </div>
                  <div class = "items">

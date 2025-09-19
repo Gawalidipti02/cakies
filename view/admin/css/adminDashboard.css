@@ -1,0 +1,10 @@
+#sidemenu{
+    border: 1px solid black;
+    width: 20%;
+    padding-left: 2%;
+}
+.item{
+    font-size: 20px;
+    padding: 1%;
+    margin-bottom: 2%;
+}
