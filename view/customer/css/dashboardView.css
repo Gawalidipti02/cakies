@@ -1,0 +1,29 @@
+#container{
+  
+}
+#innerContainer1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ .items{
+    border: 1px solid #5c4ac7;
+    background-color: #5c4ac7;
+    height: 20%;
+    width: 20%;
+    padding: 5% 2% 5% 2%;
+    font-size: 30px;
+    text-align: center;
+    color:white;
+    border-radius: 5px;
+ }
+ .smallItem{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2%;
+ }
+ #browseCake{
+    text-align: center;
+    width: 100%;
+    color:#5c4ac7
+ }

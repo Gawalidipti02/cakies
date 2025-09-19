@@ -1,0 +1,43 @@
+#container{
+	background-color: #9d3fda;
+	color: white;
+	height: 100%;
+	width: 100%;
+}
+
+#subContainer{
+	background-color: white;
+	width: 45%;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+    padding-top: 2%;
+	border-radius: 5px;
+	color: black;
+	transform: translate(-50%,-50%);
+}
+
+#forLogo{
+	height: 25%;
+}
+.forHeading{
+	font-size: 20px;
+	margin: 3%;
+}
+.forInput{
+	font-size: 15px;
+	margin: 0px 5% 0px 5%;
+	padding: 5px 0px 5px 10px;
+	width: 90%;
+}
+#login{
+	background-color: #008000;
+	color: white;
+	margin: 20px;
+	border-radius: 5px;
+	width: 40%;
+	border: 1px solid #008000;
+	padding: 1%;
+	font-size: 20px;
+}
+
