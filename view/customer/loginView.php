@@ -16,7 +16,6 @@
                         <input type = "password" id = "password" name = "password" class = "textboxses"  placeholder = "Enter Password" required>
                         <div id = "errorForPassword"> </div>
                     </div>
-                    <div id = "invalideUserError"> </div>
                     <div>
                         <input type = "submit" value = "Login" id = "login" onclick = "login()">
                     </div>
@@ -40,7 +39,9 @@
         const name = document.getElementById("username").value;
         const password = document.getElementById("password").value;
         const nameErrorBox = document.getElementById("errorForUsername");
-        const passwordErrorBox = document.getElementById("errorForPassword");      
+        const passwordErrorBox = document.getElementById("errorForPassword");  
+        const invalidLoginErrorBox = document.getElementById("invalideUserError");  
+        
 
     
         if (!name) {
@@ -98,11 +99,6 @@
         clearError("errorForUsername");
     });
 
-    document.getElementById("password").addEventListener("input", function() {
-        clearError("errorForPassword");
-    });
-
-    
     document.getElementById("password").addEventListener("input", function() {
         clearError("errorForPassword");
     });

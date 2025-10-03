@@ -1103,3 +1103,596 @@ INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
 ('Queue', @q65, 0),
 ('Stack', @q65, 0);
 
+-- Q66
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What does the Virtual Dom represent?',
+  'Select the best description.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q66 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('A JavaScript representation of the UI’s DOM elements', @q66, 1),
+('A physical DOM element in the browser', @q66, 0),
+('A server-side rendering tool', @q66, 0),
+('A CSS styling mechanism', @q66, 0);
+
+-- Q67
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does Virtual Dom affect React application performance?',
+  'Choose the correct effect.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q67 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('By reducing direct DOM manipulations, it improves speed', @q67, 1),
+('It increases memory usage drastically', @q67, 0),
+('It slows down the UI rendering', @q67, 0),
+('It has no impact on performance', @q67, 0);
+
+-- Q68
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which React lifecycle method involves Virtual Dom update?',
+  'Select the correct lifecycle phase.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q68 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('componentDidUpdate()', @q68, 1),
+('componentWillMount()', @q68, 0),
+('componentWillUnmount()', @q68, 0),
+('componentDidCatch()', @q68, 0);
+
+-- Q69
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What does React use to update the browser’s DOM efficiently?',
+  'Choose the correct mechanism.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q69 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Virtual Dom diffing and reconciliation', @q69, 1),
+('Manual DOM manipulation', @q69, 0),
+('Server-side rendering', @q69, 0),
+('Direct HTML injection', @q69, 0);
+
+-- Q70
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Why does React create a Virtual Dom?',
+  'Select the most appropriate reason.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q70 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('To minimize expensive DOM updates and improve performance', @q70, 1),
+('To increase server load', @q70, 0),
+('To avoid JavaScript processing', @q70, 0),
+('To make styling easier', @q70, 0);
+
+-- Q71
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is “reconciliation” in React Virtual Dom context?',
+  'Choose the correct definition.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q71 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Process of updating the real DOM to match the Virtual Dom', @q71, 1),
+('Ignoring the Virtual Dom', @q71, 0),
+('Loading external libraries', @q71, 0),
+('Validating props types', @q71, 0);
+
+-- Q72
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is the Virtual Dom’s impact on React developer experience?',
+  'Select the correct impact.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q72 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Makes UI updates declarative and easier to manage', @q72, 1),
+('Makes coding more complex', @q72, 0),
+('Requires more manual DOM handling', @q72, 0),
+('Removes the need for JSX', @q72, 0);
+
+-- Q73
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which of the following is NOT part of Virtual Dom reconciliation?',
+  'Choose the incorrect statement.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q73 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Manual DOM updates by the developer', @q73, 1),
+('Comparing new Virtual Dom with old one', @q73, 0),
+('Determining changes', @q73, 0),
+('Batching updates to real DOM', @q73, 0);
+
+-- Q74
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does Virtual Dom contribute to React’s declarative nature?',
+  'Choose the correct explanation.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q74 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Developers describe UI state, React handles DOM updates', @q74, 1),
+('Developers write manual DOM updates', @q74, 0),
+('It forces imperative programming', @q74, 0),
+('It removes JSX syntax', @q74, 0);
+
+-- Q75
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which of these best explains why React’s Virtual Dom is faster?',
+  'Choose the correct reason.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q75 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It minimizes direct manipulation of the slower real DOM', @q75, 1),
+('It skips rendering altogether', @q75, 0),
+('It uses server-side rendering only', @q75, 0),
+('It disables UI updates', @q75, 0);
+
+-- Q76
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What happens when React detects changes in the Virtual Dom?',
+  'Choose the correct process.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q76 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It updates only the changed parts of the real DOM', @q76, 1),
+('It reloads the entire page', @q76, 0),
+('It ignores the changes', @q76, 0),
+('It resets the application state', @q76, 0);
+
+-- Q77
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which data structure is primarily used by React for the Virtual Dom?',
+  'Choose the most suitable data structure.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q77 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Tree', @q77, 1),
+('Array', @q77, 0),
+('Graph', @q77, 0),
+('Stack', @q77, 0);
+
+-- Q78
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Why is direct manipulation of the real DOM discouraged in React?',
+  'Select the correct reason.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q78 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It is slow and inefficient', @q78, 1),
+('It is not supported by browsers', @q78, 0),
+('It causes syntax errors', @q78, 0),
+('It makes CSS unusable', @q78, 0);
+
+-- Q79
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How often does React update the real DOM?',
+  'Select the best answer.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q79 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Only when the Virtual Dom changes', @q79, 1),
+('Every millisecond', @q79, 0),
+('Only on initial load', @q79, 0),
+('Never', @q79, 0);
+
+-- Q80
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which React feature works closely with Virtual Dom to optimize rendering?',
+  'Choose the correct feature.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q80 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Reconciliation', @q80, 1),
+('Routing', @q80, 0),
+('Hooks', @q80, 0),
+('Context API', @q80, 0);
+
+-- Q81
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What role does the Virtual Dom play in state changes?',
+  'Select the correct description.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q81 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It efficiently updates the UI by comparing previous and current states', @q81, 1),
+('It deletes state automatically', @q81, 0),
+('It bypasses state updates', @q81, 0),
+('It requires manual DOM updates after state changes', @q81, 0);
+
+-- Q82
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which React method triggers Virtual Dom rendering?',
+  'Choose the correct method.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q82 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('render()', @q82, 1),
+('componentWillUnmount()', @q82, 0),
+('shouldComponentUpdate()', @q82, 0),
+('componentDidMount()', @q82, 0);
+
+-- Q83
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What does React compare to detect changes in the UI?',
+  'Select the correct comparison.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q83 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('New Virtual Dom vs old Virtual Dom', @q83, 1),
+('New real DOM vs old real DOM', @q83, 0),
+('Old Virtual Dom vs real DOM', @q83, 0),
+('CSS vs JavaScript', @q83, 0);
+
+-- Q84
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which is NOT a benefit of Virtual Dom?',
+  'Select the incorrect benefit.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q84 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Eliminates the need for JavaScript', @q84, 1),
+('Improves UI performance', @q84, 0),
+('Reduces direct DOM manipulation', @q84, 0),
+('Simplifies UI updates', @q84, 0);
+
+-- Q85
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What technique does React use to efficiently update the DOM?',
+  'Choose the correct technique.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q85 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Diffing algorithm', @q85, 1),
+('Brute force', @q85, 0),
+('Linear search', @q85, 0),
+('Depth-first search', @q85, 0);
+
+-- Q86
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is the main disadvantage of updating the real DOM directly?',
+  'Choose the correct disadvantage.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q86 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Performance lag due to reflow and repaint', @q86, 1),
+('It causes security vulnerabilities', @q86, 0),
+('It breaks CSS styles', @q86, 0),
+('It disables JavaScript execution', @q86, 0);
+
+-- Q87
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does React batch updates to the real DOM?',
+  'Select the correct explanation.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q87 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Collects multiple changes and applies them in a single update', @q87, 1),
+('Updates the DOM immediately after every change', @q87, 0),
+('Skips updates if there are multiple changes', @q87, 0),
+('Updates only once per application launch', @q87, 0);
+
+-- Q88
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is the benefit of using a Virtual Dom tree?',
+  'Choose the correct benefit.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q88 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It allows efficient diffing and updates', @q88, 1),
+('It increases browser load times', @q88, 0),
+('It disables user interactions', @q88, 0),
+('It replaces CSS styling', @q88, 0);
+
+-- Q89
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which of the following is a false statement about Virtual Dom?',
+  'Identify the incorrect statement.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q89 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Virtual Dom manipulates real DOM directly without diffing', @q89, 1),
+('Virtual Dom improves rendering performance', @q89, 0),
+('Virtual Dom is a JavaScript object', @q89, 0),
+('Virtual Dom allows React to batch DOM updates', @q89, 0);
+
+-- Q90
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does React create the Virtual Dom?',
+  'Select the correct process.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q90 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('By rendering JSX into lightweight JavaScript objects', @q90, 1),
+('By directly accessing the browser DOM', @q90, 0),
+('By writing HTML manually', @q90, 0),
+('By using server-side databases', @q90, 0);
+
+-- Q91
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What makes Virtual Dom faster than direct DOM manipulation?',
+  'Choose the best explanation.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q91 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('It minimizes reflows and repaints by batching updates', @q91, 1),
+('It ignores user events', @q91, 0),
+('It deletes unused components', @q91, 0),
+('It disables CSS rendering', @q91, 0);
+
+-- Q92
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does React know which components to update?',
+  'Select the correct method.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q92 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('By comparing the new Virtual Dom tree with the previous one', @q92, 1),
+('By refreshing the entire UI', @q92, 0),
+('By manual developer input', @q92, 0),
+('By server commands', @q92, 0);
+
+-- Q93
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which of these is NOT a step in React’s Virtual Dom update process?',
+  'Choose the incorrect step.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q93 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Manually editing the real DOM', @q93, 1),
+('Diffing the Virtual Dom trees', @q93, 0),
+('Batching changes', @q93, 0),
+('Updating the real DOM', @q93, 0);
+
+-- Q94
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'In React, what is the significance of keys in Virtual Dom lists?',
+  'Choose the correct answer.',
+  2, 1, 3,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q94 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('They help React identify which items have changed', @q94, 1),
+('They style the list items', @q94, 0),
+('They slow down rendering', @q94, 0),
+('They are required for CSS animations', @q94, 0);
+
+-- Q95
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which statement about Virtual Dom is true?',
+  'Select the correct statement.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q95 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Virtual Dom is an abstraction that enhances UI updates', @q95, 1),
+('Virtual Dom replaces JavaScript', @q95, 0),
+('Virtual Dom is only used in Angular', @q95, 0),
+('Virtual Dom disables CSS', @q95, 0);
+
+-- Q96
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'How does React optimize updates using Virtual Dom?',
+  'Choose the correct optimization.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q96 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('By performing diffing and batch updating the real DOM', @q96, 1),
+('By updating the DOM on every state change instantly', @q96, 0),
+('By skipping rendering altogether', @q96, 0),
+('By disabling event handlers', @q96, 0);
+
+-- Q97
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which of these is NOT true about Virtual Dom?',
+  'Select the incorrect statement.',
+  2, 1, 1,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q97 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Virtual Dom directly manipulates CSS styles', @q97, 1),
+('Virtual Dom is lightweight', @q97, 0),
+('Virtual Dom helps improve performance', @q97, 0),
+('Virtual Dom reduces costly DOM operations', @q97, 0);
+
+-- Q98
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is the first step React takes when the state changes?',
+  'Select the correct first step.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q98 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Creates a new Virtual Dom tree', @q98, 1),
+('Updates the real DOM immediately', @q98, 0),
+('Reloads the page', @q98, 0);
+
+-- Q99
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'Which library does React use internally for Virtual Dom?',
+  'Choose the correct library.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q99 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('React Reconciler', @q99, 1),
+('jQuery', @q99, 0),
+('Lodash', @q99, 0),
+('Redux', @q99, 0);
+
+-- Q100
+INSERT INTO questions (title, description, marks, is_important, complexity_id, topic_id, course_id, is_deleted)
+VALUES (
+  'What is the key benefit of Virtual Dom diffing?',
+  'Select the correct benefit.',
+  2, 1, 2,
+  (SELECT id FROM topics WHERE title = 'Virtual Dom'),
+  (SELECT id FROM courses WHERE course_name = 'React Js'),
+  0
+);
+SET @q100 = LAST_INSERT_ID();
+INSERT INTO answer_option (description, question_id, is_correct_answer) VALUES
+('Minimizes real DOM updates improving performance', @q100, 1),
+('Makes DOM updates slower', @q100, 0),
+('Increases memory usage unnecessarily', @q100, 0),
+('Disables event handling', @q100, 0);
