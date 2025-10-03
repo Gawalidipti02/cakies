@@ -17,6 +17,7 @@
     position: relative;    
     max-height: 70vh;   
     overflow-y: auto;
+ 
 }
 
 .items{
@@ -48,12 +49,10 @@
     
 
 }
-#cancle{
+#cancleButton{
   padding: 2%;
   margin-right: 5%;
-
   border: 1px solid red;
-
   font-size: 20px;
 }
 #register{

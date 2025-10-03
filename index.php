@@ -7,7 +7,7 @@ if (isset($_GET["controller"])) {
     launchAction($controllerObj);
 } else {
     // We load the default controller instance
-    $controllerObj = loadController($_GET["controller"]);
+    $controllerObj = loadController('customer');
                 
     // We launch the action
      launchAction($controllerObj);
@@ -24,10 +24,10 @@ function loadController($controller)
             $controllerObj = new dashboardController();
             break;
         case 'admin':
-        $strFileController = 'controller/AdminController.php';
-        require_once $strFileController;
-        $controllerObj = new adminController();
-        break;
+            $strFileController = 'controller/AdminController.php';
+            require_once $strFileController;
+            $controllerObj = new adminController();
+            break;
 
         default:
             $strFileController = 'controller/CustomerController.php';

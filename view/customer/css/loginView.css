@@ -50,11 +50,22 @@ h3{
     width: 80%;
 }
 #register{
-    margin-top: 5%;
-    position: relative;
-    top: 20%;
+  margin: 5% 0px 0px 0px;
  
 }
 #createAccount{
     text-decoration: none;
+}
+#errorForUsername{
+  display: none;
+  color: red;
+}
+
+#errorForPassword{
+  display: none;
+  color: red;
+}
+#errorForMismatchedData{
+  display: none;
+  color: red;
 }

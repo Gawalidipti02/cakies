@@ -15,3 +15,10 @@ CREATE TABLE admin (
     username VARCHAR(100),
     password VARCHAR(50)    
 );
+
+RENAME TABLE users TO customers;
+
+
+ALTER TABLE customers CHANGE user_id id INT NOT NULL PRIMARY KEY;
+
+ALTER TABLE customers MODIFY id INT NOT NULL AUTO_INCREMENT;

@@ -1,29 +1,66 @@
 #container{
-  
+   padding: 20px;
 }
-#innerContainer1{
+#navbar{
+   background-color: #ff69b4;
+   color: white;
+   padding: 15px 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#innerContainer2{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    flex-wrap: wrap;
 }
  .items{
-    border: 1px solid #5c4ac7;
-    background-color: #5c4ac7;
-    height: 20%;
-    width: 20%;
-    padding: 5% 2% 5% 2%;
-    font-size: 30px;
-    text-align: center;
-    color:white;
-    border-radius: 5px;
+    background-color: white;
+        border: 1px solid #ddd;
+        width: 220px;
+        height: 150px;
+        margin: 15px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.05);
+        transition: 0.3s;
+        cursor: pointer;
  }
  .smallItem{
     text-align: center;
     font-size: 20px;
     margin-top: 2%;
+    color: #555;
+ 
  }
- #browseCake{
+ .heading{
+   font-size: 20px;
+   font-weight: bold;
+ }
+
+ #dashboardHeading{
     text-align: center;
-    width: 100%;
-    color:#5c4ac7
+    margin-top: 3%;
+    
  }
+ #browsCake{
+   text-decoration:none;
+   color: black;
+ }
+
+.items:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#logout{
+   color: white;
+   text-decoration: none;
+   margin-left: 20px;
+   background-color: #e6004c;
+   padding: 8px 12px;
+   border-radius: 5px;
+   
+}
