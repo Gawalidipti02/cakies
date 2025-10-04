@@ -37,12 +37,10 @@
                     break;  
                 case 'loginCustomer':
                     $this->loginCustomer();
-                    break;    
-                    
+                    break;
                 case 'dashboard':
                     $this->dashboard();
-                    break;    
-                                                    
+                    break;                                      
                 default:
                     $this->index();
                     break;
@@ -118,29 +116,26 @@
                 if($_SERVER['REQUEST_METHOD']=== "POST")
                 {
                     $json = file_get_contents('php://input');
-                    $data = json_decode($json,true);                
+                    $data = json_decode($json,true);                        
+            
+                    $full_name = $data['name'];
+                    $password = $data['password'];    
 
-                    
-                    if ($data !== null)
-                    {
-                        $full_name = $data['name'];
-                        $password = $data['password'];    
+                    $customer = new Customers ($this->Connection);
+                    $result = $customer->login($full_name,$password);
 
-                        $customer = new Customers ($this->Connection);
-                        $result = $customer->login($full_name,$password);
-
+                    if(count($result) <= 0){
+                        $data = array(
+                            'status'=>false,
+                            'message'=>'No user found',                                      
+                        );    
+                    }else{
                         $data = array(
                             'status'=>true,
                             'message'=>'login successfully',                                      
-                        );       
-                                
-                    }
-                    else {
-                        $data = array(
-                            'status' => false,
-                            'message' => 'Invalid Username And Password',
-                        );
-                    }
+                        );    
+                    }                                  
+                    
                 } 
                 else {
                         $data = array(

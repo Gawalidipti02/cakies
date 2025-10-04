@@ -77,7 +77,7 @@
           
         if(data.status)
         {
-            //  window.location.href = "?controller=customer&action=dashboard";
+             window.location.href = "?controller=customer&action=dashboard";
         } else{
             const errorBox = document.getElementById("errorForMismatchedData");
             errorBox.style.display = "block";
